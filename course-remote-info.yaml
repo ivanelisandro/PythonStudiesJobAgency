@@ -3,11 +3,11 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/303588/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: Thu, 05 Aug 2021 22:00:51 UTC
+update_date: Mon, 09 Aug 2021 23:26:19 UTC
 stages:
 - id: 519
   step: 8598
-  is_completed: false
+  is_completed: true
 - id: 520
   step: 8599
   is_completed: false
@@ -34,8 +34,6 @@ topics:
     theory_id: 6569
   - title: Introduction to operating systems
     theory_id: 9704
-  - title: Files
-    theory_id: 13025
   - title: Introduction to Django
     theory_id: 6277
   - title: Django MVC
@@ -226,6 +224,8 @@ topics:
     theory_id: 7527
   - title: HTML forms
     theory_id: 6560
+  - title: Files
+    theory_id: 13025
   - title: File types
     theory_id: 13017
   - title: Queries and filters
