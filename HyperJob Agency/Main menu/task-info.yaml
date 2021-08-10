@@ -717,6 +717,15 @@ files:
             ),
         ]
   learner_created: true
+- name: menu/templates/menu/base.html
+  visible: true
+  learner_created: true
+- name: menu/templates/menu/index.html
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/94/stages/520/implement#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Tue, 10 Aug 2021 00:18:08 UTC
 record: -1
