@@ -6,8 +6,9 @@
   <ul> 
    <li>name, <code class="java">CharField</code> with <code class="java">max_length=32</code></li> 
    <li>champion, <code class="java">ForeignKey</code> to a model <em>Team</em> with <code class="java">related_name='champion_of'</code></li> 
-   <li>number_of_teams, <code class="java">IntegerField</code></li> 
+   <li>number_of_teams, <code class="java">PositiveIntegerField</code></li> 
   </ul> 
+  <p><code class="java">PositiveIntegerField</code>, as you might guess, is the same as IntegerField but can store only positive values.</p> 
   <p></p>
   <div class="alert alert-warning">
    Please, do not remove the Meta class from the models!

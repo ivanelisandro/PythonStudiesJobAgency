@@ -1,0 +1,12 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: green_car = ...
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/7012#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Thu, 19 Aug 2021 23:59:37 UTC
+record: -1

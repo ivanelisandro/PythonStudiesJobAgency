@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/303588/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: Mon, 09 Aug 2021 23:26:19 UTC
+update_date: Tue, 24 Aug 2021 03:33:39 UTC
 stages:
 - id: 519
   step: 8598
@@ -74,14 +74,6 @@ topics:
     theory_id: 5913
   - title: Program with numbers
     theory_id: 5872
-  - title: Invoking a function
-    theory_id: 5891
-  - title: Declaring a function
-    theory_id: 5900
-  - title: Scopes
-    theory_id: 6322
-  - title: Arguments
-    theory_id: 7248
   - title: If statement
     theory_id: 5953
   - title: Else statement
@@ -90,14 +82,6 @@ topics:
     theory_id: 5926
   - title: For loop
     theory_id: 6065
-  - title: Functional decomposition
-    theory_id: 9571
-  - title: Default arguments
-    theory_id: 10295
-  - title: Args
-    theory_id: 8560
-  - title: Kwargs
-    theory_id: 9544
   - title: Load module
     theory_id: 6019
   - title: Create module
@@ -160,26 +144,42 @@ topics:
     theory_id: 5979
   - title: Indexes
     theory_id: 6189
+  - title: Invoking a function
+    theory_id: 5891
+  - title: Declaring a function
+    theory_id: 5900
+  - title: Scopes
+    theory_id: 6322
+  - title: Basic string methods
+    theory_id: 6842
   - title: Boolean logic
     theory_id: 6025
   - title: Comparisons
     theory_id: 5920
-  - title: Dictionary
-    theory_id: 6481
-  - title: Tuple
-    theory_id: 7462
-  - title: Operations with list
-    theory_id: 6031
   - title: Identity testing
     theory_id: 8077
-  - title: Basic string methods
-    theory_id: 6842
+  - title: Dictionary
+    theory_id: 6481
+  - title: Arguments
+    theory_id: 7248
+  - title: Operations with list
+    theory_id: 6031
+  - title: Tuple
+    theory_id: 7462
+  - title: Functional decomposition
+    theory_id: 9571
   - title: Dictionary methods
     theory_id: 9008
   - title: Operations with dictionary
     theory_id: 11096
   - title: Objects in Python
     theory_id: 9262
+  - title: Default arguments
+    theory_id: 10295
+  - title: Args
+    theory_id: 8560
+  - title: Kwargs
+    theory_id: 9544
   - title: Split and join
     theory_id: 6972
   1:
