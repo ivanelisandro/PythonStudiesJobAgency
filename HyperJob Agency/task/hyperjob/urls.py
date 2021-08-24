@@ -17,8 +17,12 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path
 from menu.views import MenuView
+from resume.views import ResumesView
+from vacancy.views import VacanciesView
 
 urlpatterns = [
+    path('resumes', ResumesView.as_view()),
+    path('vacancies', VacanciesView.as_view()),
     path('', MenuView.as_view()),
 ]
 urlpatterns += static(settings.STATIC_URL)
