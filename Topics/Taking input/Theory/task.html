@@ -3,7 +3,7 @@
  <head></head>
  <body>
   <p>Sometimes programs need to interact with users, either to receive some data or to deliver some sort of result. And that's when the <code class="language-python">input()</code><strong> </strong>function steals the show.</p> 
-  <h2 style="text-align: center;">Reading input from a user</h2> 
+  <h5 style="text-align: center;">Reading input from a user</h5> 
   <p>The input data we want to get is nothing but some value entered by the user. The <code class="language-python">input()</code> function reads this value and returns it in a program as a string. For example, the following program reads the user name and prints a greeting.</p> 
   <pre><code class="language-python">user_name = input()
 print('Hello, ' + user_name)</code></pre> 
@@ -11,7 +11,7 @@ print('Hello, ' + user_name)</code></pre>
   <p>If a user enters <code class="language-python">Sauron</code>, this program prints:</p> 
   <pre><code class="language-python">Hello, Sauron</code></pre> 
   <p>So, your program prints a result that depends on the user's input (name).</p> 
-  <h2 style="text-align: center;">Clear messages</h2> 
+  <h5 style="text-align: center;">Clear messages</h5> 
   <p>It is highly recommended to state clearly what type of input we expect from our user. To do so, the <code class="language-python">input()</code> function may take an optional argument, that is a message:</p> 
   <pre><code class="language-python">user_name = input('Please, enter your name: ')
 print('Hello, ' + user_name)</code></pre> 
@@ -28,7 +28,7 @@ print('Hello, ' + user_name)</code></pre>
    Although it is recommended to print messages for users, avoid them in our educational programming challenges, otherwise your code may not pass our tests.
   </div>
   <p></p> 
-  <h2 style="text-align: center;">Important details</h2> 
+  <h5 style="text-align: center;">Important details</h5> 
   <p>Let's dig into some details. First of all, how long can the user's input be? The second question is: how does the program understand that the person entered everything they wanted?</p> 
   <p>Here's a thing about the <code class="language-python">input()</code> function: as soon as the program has started executing this function, it stops and waits for the user to enter some value and <strong>press Enter</strong>. That also means that if there's no input from the user, the program will not execute any further.</p> 
   <p>What else should you remember? Well, this: any value you enter, the function sees as a <strong>string</strong>. It doesn't matter if you enter digits or letters, the input will be converted to a string.</p> 
@@ -42,7 +42,7 @@ month = input()     # October</code></pre>
   <p>Brilliant! Why this date? It's simple:</p> 
   <pre><code class="language-python">print('Cinnamon roll day is celebrated on', month, day)
 # Cinnamon roll day is celebrated on October 4</code></pre> 
-  <h2>Conclusion</h2> 
+  <h5>Conclusion</h5> 
   <p>Congratulations, now you know how to work with <code class="language-python">input()</code>, that is, a function that helps you interact with the user. Believe us, this is something you will definitely appreciate when programming.</p>
  </body>
 </html>

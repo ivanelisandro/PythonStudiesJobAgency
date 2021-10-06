@@ -2,18 +2,18 @@
 <html>
  <head></head>
  <body>
-  <h2>Working With a Database From Python</h2> 
+  <h5>Working With a Database From Python</h5> 
   <p>Chances are, the storage you most often work with is a file system. It works well for HTML pages and templates, but how do you keep small objects like login, age or, say, favorite color for each individual person? Relational databases can help you organize and manipulate such data.</p> 
   <p>We will start from scratch and learn how to work with databases using only Python. </p> 
   <p>We define models to describe the schema of our data. To convert Python objects and primitives to database types, we will use adaptor classes, Fields. These abstractions help us pay less attention to the database specifics and focus mainly on what to store and how.</p> 
   <p>Once we declare the models and the fields in them, we create migrations and apply them to the SQLite3 database. Feel free to change it to another <a target="_blank" href="https://docs.djangoproject.com/en/2.2/ref/databases/" rel="noopener noreferrer nofollow">database backend</a>. No matter which database you choose, our code will remain valid.</p> 
-  <h2>Relational Databases</h2> 
+  <h5>Relational Databases</h5> 
   <p>If your first thought is <em>"I need to keep the data with a common structure"</em>, then your second thought should surely be "databases".</p> 
   <p>A <strong>relational database</strong> is a collection of multiple data sets organized by tables, records, and columns. It works fine for most types of data. Each implementation provides you the universal language called structured query language (SQL). You can <a target="_blank" href="https://www.studytonight.com/dbms/introduction-to-sql.php" rel="noopener noreferrer nofollow">read about it</a>, but as we said, we will work with the database in another way. </p> 
   <p>The most popular databases are PostgreSQL, Oracle SQL, MS SQL, and MySQL. There is also a simple database that works on your smartphone in many applications: it's called SQLite. It's perfect for one-client use and trying out Django models for the first time. Check whether you have it on your computer:</p> 
   <pre><code class="language-bash">sqlite3 --version</code></pre> 
   <p>If you don't, try to install it with your package manager or download it from <a target="_blank" href="https://www.sqlite.org/download.html" rel="noopener noreferrer nofollow">the official site</a>.</p> 
-  <h2>Object-Relational Mapping</h2> 
+  <h5>Object-Relational Mapping</h5> 
   <p>With the fall approaching and clouds getting denser, the new season of Quidditch is starting. As you know, wizards really lack computer science classes in Hogwarts, even though programming is a kind of magic. They want to store the teams, their results and the rosters on the website, and they wonder if there is a way to do it with Django. Well, there sure is! For this purpose, we will make the <em>quidditch</em> project with the <em>tournament</em> app in it. Let's meet and greet Django Models!</p> 
   <p><strong>Django Models</strong> are classes that map the objects from the real world to the database records. We have teams, so we call our model the <em>Team</em>. This approach is called <strong>Object-Relational Mapping</strong>(<strong>ORM</strong>).</p> 
   <p>The <strong>ORM</strong> is a concept to map one type system to the other. We will work with databases by means of Python classes and methods. Our strong side is the programming language and we are going to make the most of it. The objects are similar to database records and their methods resemble SQL commands. There's no need to know SQL directly as we apply the instruments that imitate it.</p> 
@@ -38,7 +38,7 @@ class Game(models.Model):
     rival_team = ...
     rival_team_points = ...</code></pre> 
   <p>We gave names to our classes and described their content. The restriction of all relational databases is that we should define the types for all the fields in the Model. So how can we match the types with the fields?</p> 
-  <h2>Fields</h2> 
+  <h5>Fields</h5> 
   <p>To get most of the database's features, we use special <em>Fields</em> classes. They map the attribute of the class to a particular column in the database table. Does it mean we need the instance of a class for each field? Yes, but don't worry, it's actually easier than it may seem.</p> 
   <p>To build the whole schema, we start from the core element, the <em>Team:</em></p> 
   <pre><code class="language-python">class Team(models.Model):
@@ -59,7 +59,7 @@ class Game(models.Model):
   <p>There are no games without teams, so again we set <code class="language-bash">on_delete=models.CASCADE</code> for each <code class="language-bash">ForeignKey</code>. Also, we add the <code class="language-bash">related_name</code> for the <em>Game</em> model, by which we can access it from the <em>Team</em> model. It's necessary to add such names because we have two foreign keys to the <em>Team</em> and you should differ one from another.</p> 
   <p>Points is an <code class="language-bash">int</code> type, so we make it <code class="language-bash">IntegerField</code>, and the date is clearly a <code class="language-bash">DateField</code>.</p> 
   <p>You can think of <em>Fields</em> as expansions of Python's primitive types for simple cases like <code class="language-bash">IntegerField</code>, <code class="language-bash">CharField</code>, and <code class="language-bash">FloatField</code>. They also have special cases like <code class="language-bash">ForeignKey</code> and other <a target="_blank" href="https://docs.djangoproject.com/en/2.2/topics/db/models/#relationships" rel="noopener noreferrer nofollow">relations between objects</a>.</p> 
-  <h2>Migrations</h2> 
+  <h5>Migrations</h5> 
   <p>At this point, we describe the mappings between Python classes and database tables, but we don't have any tables yet. That's sad news. Should we learn some fancy SQL to create a database and tables in it? No, because we can simply describe to Django what we want and it will do the dirty work for us — again.</p> 
   <p>Add tournament to <code class="language-bash">INSTALLED_APPS</code> in the <em>quidditch/settings.py </em>module:</p> 
   <pre><code class="language-python">INSTALLED_APPS = [

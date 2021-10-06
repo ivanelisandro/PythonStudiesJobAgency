@@ -3,7 +3,7 @@
  <head></head>
  <body>
   <p>There are several types of collections to store data in Python. Positionally ordered collections of elements are usually called <strong>sequences</strong>, and both lists and strings belong to them. Each element in a list, as well as each character in a string, has an <strong>index</strong> that corresponds to its position. Indexes are used to access elements within a sequence. Indexing is <em>zero-based</em>, so if you see a person who counts from zero, you must have met a programmer.</p> 
-  <h2 style="text-align: center;">Indexes of elements</h2> 
+  <h5 style="text-align: center;">Indexes of elements</h5> 
   <p>To access an element of a list by its index, you need to use <strong>square brackets. </strong>You add the brackets after the list and, between them, you write the index of an element you want to get.</p> 
   <p>Don't forget<strong>, </strong> the indexes start at 0, so the index of the first element is 0. The index of the last element is equal to <code class="language-python">len(list) - 1</code>.</p> 
   <p>Let's take a look at the example below:</p> 
@@ -18,7 +18,7 @@ third_elem = colors[2]   # 'blue'</code></pre>
 first_char = pet[0]   # 'c'
 second_char = pet[1]  # 'a'
 third_char = pet[2]   # 't'</code></pre> 
-  <h2 style="text-align: center;">Potential pitfalls</h2> 
+  <h5 style="text-align: center;">Potential pitfalls</h5> 
   <p>When using indexes, it's important to stay within the range of your sequence: you'll get an error (called <code class="language-python">IndexError</code>) if you try to access an element with a non-existing index!</p> 
   <pre><code class="language-python">colors = ['red', 'green', 'blue']
 pet = "cat"
@@ -36,7 +36,7 @@ print(colors)  # ['red', 'white', 'blue']</code></pre>
 pet[0] = "b"
 # TypeError: 'str' object does not support item assignment</code></pre> 
   <p>Don't worry, after some practice, you will not encounter these errors.</p> 
-  <h2 style="text-align: center;">Negative indexes</h2> 
+  <h5 style="text-align: center;">Negative indexes</h5> 
   <p>The easier way to access the elements at the end of a list or a string is to use <strong>negative indexes</strong>: the minus before the number changes your perspective in a way and you look at the sequence from the end. So, the last element of a list, in this case, has the index equal to <strong>-1</strong>, and the first element of the list has the index <code class="language-python">-len(list)</code> (the length of the list).</p> 
   <p>For example:</p> 
   <pre><code class="language-python">colors = ['red', 'green', 'blue']
@@ -59,7 +59,7 @@ first_char = pet[-3]   # 'c'</code></pre>
   <p></p> 
   <p>The following picture shows the general concept of indexes in a list:</p> 
   <p style="text-align: center;"><img alt="" height="170" src="https://ucarecdn.com/5485f397-8a2f-4279-b534-a496fe509469/" width="511"></p> 
-  <h2>Summary</h2> 
+  <h5>Summary</h5> 
   <p>In this topic, we've learned what positive and negative indexes are in Python, how to find elements in a list by their indexes, and what errors might occur when using them. Since you have learned the concept of indexes, we hope that from now on you will not encounter any difficulties when using them!</p>
  </body>
 </html>

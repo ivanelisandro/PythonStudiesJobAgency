@@ -4,7 +4,7 @@
  <body>
   <p>The advantage of using a framework is that all its parts are easily combinable. We have <em>templates</em> to render HTML pages and<em> models</em> to work with the database. If you are entertaining the idea of using them together, you're right to do so. </p> 
   <p>This time we'll focus not only on simple HTML layout, but on <em>forms</em> that are used for communication with the server and sending data to it.</p> 
-  <h2>Passing Object to Template</h2> 
+  <h5>Passing Object to Template</h5> 
   <p>Do you like music? Do you like it as much as creating your own music service? With this service you'll be able to listen to a variety of tracks, search for specific songs and mark your favorite ones. We don't need much for the first prototype – let's use Django's <code class="language-python">User</code> model and define another one ourselves:</p> 
   <pre><code class="language-python">from django.contrib.auth.models import User
 from django.db import models
@@ -31,7 +31,7 @@ class Song(models.Model):
    <em>settings.py</em> module.
   </div>
   <p></p> 
-  <h2>Forms</h2> 
+  <h5>Forms</h5> 
   <p>One of the best features of music services is the possibility to create playlists with favorite songs; our service definitely needs that! We extend the existing template with a <em>form</em> to use it in <em>POST</em> requests:</p> 
   <pre><code class="language-django">&lt;form action="/add_to_favorites" method="post"&gt;
    {% csrf_token %}
@@ -47,7 +47,7 @@ class Song(models.Model):
    <em>/add_to_favorites</em>". You can find this URL in the action field of the form.
   </div>
   <p></p> 
-  <h2>Many Objects</h2> 
+  <h5>Many Objects</h5> 
   <p>A whole playlist will be shown on the main page, and here it's slightly different from having just one object per page. Using a<span style="color: #ff4363;"> </span><code class="language-python">for</code><span style="color: #ff4363;"> </span>loop and a QuerySet would work well for a situation like that.</p> 
   <p>We create a new page and change the context data passed to the template. Ten or fewer random songs from the database will appear; now our context data are <code class="language-python">{'songs': Song.objects.all()[:10]}</code>:</p> 
   <pre><code class="language-django">{% for song in songs %}
@@ -64,7 +64,7 @@ class Song(models.Model):
    It's usually better to calculate such data at a stage of processing the request in a handler. We should define only the representation of a page in our template.
   </div>
   <p></p> 
-  <h2>Using Filters</h2> 
+  <h5>Using Filters</h5> 
   <p>Django provides filters for processing values in templates. Sometimes they can really save us time, yet they may also yield surprising results. The template processor uses the string representation of an object, which has its pros and cons.<span style="color: #ff4363;"> </span>Being careful with that is the key to getting the most of Django.</p> 
   <p>Let's slightly change the template from the previous example:</p> 
   <pre><code class="language-django">{% for song in songs %}
@@ -92,7 +92,7 @@ class Song(models.Model):
 {% endfor %}</code></pre> 
   <p>This time we prudently convert all values to an HTML <a target="_blank" href="https://docs.djangoproject.com/en/2.2/ref/templates/builtins/#unordered-list" rel="noopener noreferrer nofollow">unordered list</a> with the <code class="language-python">unordered_list</code> filter, and our output now looks quite satisfying:</p> 
   <p><img alt="" src="https://ucarecdn.com/0a6fca82-9784-4702-b6a2-e3e18da98754/"></p> 
-  <h2>Conclusion</h2> 
+  <h5>Conclusion</h5> 
   <p>There are ways to take this idea further and really elaborate: for example, one could think of the best and most convenient design for the users. You could think about that too, or make your own application and share your skills and the fruit of your labor with your friends. The main thing is – you know enough to start making pages using Django models.</p>
  </body>
 </html>

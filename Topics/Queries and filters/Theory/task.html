@@ -9,7 +9,7 @@
    Reading the data is the most common operation for a web application. The clients get data from the server more often than modify or delete it.
   </div>
   <p></p> 
-  <h2>Model Object Manager</h2> 
+  <h5>Model Object Manager</h5> 
   <p>An instance of the Model class represents a single row in the table of your database. To start working with a set of rows you should call the <strong>Model Object Manager</strong> methods.</p> 
   <p>The Manager is a special class to get object(s) from the database and modify them. To access the Manager of your model, you should get the attribute "<em>objects</em>" of the <code class="language-python">Model</code> class.</p> 
   <p>Right now we are working on a <em>tournament</em> application for a Quidditch league. The season is coming, but the website is not ready yet! The wizards from Hogwarts get used to working with the books and papers but know nothing about databases. Fortunately, you don't need magic to start querying and searching. We create models <code class="language-python">Team</code> and <code class="language-python">Player</code> and that's how we define them:</p> 
@@ -42,7 +42,7 @@ Player.objects.create(name="Lennox Campbell", height=197, team=montrose_magpies)
    Remember that you should migrate your models before using it!
   </div>
   <p></p> 
-  <h2>Get an Object</h2> 
+  <h5>Get an Object</h5> 
   <p>One step at a time, we will start from getting the team we want and then move on to getting a distinct player.</p> 
   <p>Unlike Python's <code class="language-python">dict</code> <em>get</em> method, the Manager's <em>get</em> method may raise an <code class="language-python">Exception</code>. You should keep in mind two rules:</p> 
   <ul> 
@@ -66,7 +66,7 @@ except Team.DoesNotExist:
 falcon_player = Player.objects.get(team=falcons)</code></pre> 
   <p>You will not get a player, but a <code class="language-python">Player.MultipleObjectsReturned</code> exception.</p> 
   <p>It seems that life is not that easy with the get queries. Sometimes we get an object, sometimes we get an error and we're never sure what happens next. Data may change and our valid call will start raising an <code class="language-python">Exception</code>. You may turn to other Manager's methods and see what they can do for you.</p> 
-  <h2>Filtering Objects</h2> 
+  <h5>Filtering Objects</h5> 
   <p>Like the standard Python <em>filter</em> function, the Manager's <em>filter</em> method returns only the objects that match the query. You don't have to know initially how many objects it will return, so it's safer than the <em>get</em> method.</p> 
   <p>The only rule is similar to the first rule for the <em>get</em> method:</p> 
   <ul> 
@@ -93,7 +93,7 @@ falcon_player = Player.objects.filter(team=falcons).first()</code></pre>
    <code class="language-python">None</code>.
   </div>
   <p></p> 
-  <h2>Conclusion</h2> 
+  <h5>Conclusion</h5> 
   <p>It's likely that getting data from a database is an operation you will frequently use. We started polishing our skills by getting and filtering data. We found out how to retrieve a single object and a QuerySet to work with them as we work with other Python classes. However, the main purpose of Django is to provide the tools to make web services, and you can easily apply your query skills for doing analytics and reports.</p>
  </body>
 </html>

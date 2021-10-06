@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/303588/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: Tue, 24 Aug 2021 03:33:39 UTC
+update_date: Wed, 06 Oct 2021 22:02:31 UTC
 stages:
 - id: 519
   step: 8598
@@ -37,11 +37,9 @@ topics:
   - title: Introduction to Django
     theory_id: 6277
   - title: Django MVC
+    theory_id: 15548
+  - title: Django project structure
     theory_id: 6285
-  - title: Introduction to databases
-    theory_id: 8497
-  - title: What is SQL
-    theory_id: 7054
   - title: Django ORM
     theory_id: 6832
   - title: Computer programming
@@ -126,6 +124,10 @@ topics:
     theory_id: 6230
   - title: Virtual Environment
     theory_id: 13923
+  - title: Introduction to databases
+    theory_id: 8497
+  - title: What is SQL
+    theory_id: 7054
   - title: Object-Relational Mapping (ORM)
     theory_id: 8312
   - title: Basic data types
@@ -195,6 +197,10 @@ topics:
     theory_id: 6491
   - title: Inline Elements
     theory_id: 7518
+  - title: File types
+    theory_id: 13017
+  - title: Starting a project
+    theory_id: 15547
   - title: Launching web server
     theory_id: 6651
   - title: Processing requests
@@ -224,28 +230,16 @@ topics:
     theory_id: 7527
   - title: HTML forms
     theory_id: 6560
-  - title: Files
-    theory_id: 13025
-  - title: File types
-    theory_id: 13017
   - title: Queries and filters
     theory_id: 7005
   - title: Using models with templates
     theory_id: 7637
-  - title: Design principles
-    theory_id: 8956
-  - title: Introduction to Linux
-    theory_id: 9526
-  - title: File modes and permissions
-    theory_id: 13953
-  - title: Working with file modes and permissions
-    theory_id: 13961
-  - title: Files in Python
-    theory_id: 8691
   - title: Built-in exceptions
     theory_id: 11680
   - title: Exception handling
     theory_id: 6270
+  - title: Design principles
+    theory_id: 8956
   3:
   - title: Domains
     theory_id: 6911

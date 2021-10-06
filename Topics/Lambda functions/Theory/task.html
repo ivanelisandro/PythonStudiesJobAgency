@@ -3,7 +3,7 @@
  <head></head>
  <body>
   <p>In programming, it's often useful to know alternative ways to implement something. It not only shows your knowledge and creative analytical thinking, sometimes one implementation just fits better for some reason like the time it takes to execute or memory it needs. Also, as you probably know already, that reason is often the number of lines of code. So, in this topic, we'll learn a great alternative to small functions!</p> 
-  <h2>Defining a lambda function</h2> 
+  <h5>Defining a lambda function</h5> 
   <p>Imagine that you want to write a function that takes a number and doubles it. If you already know how to define functions in Python using the <strong>def </strong>keyword, you will probably write something like this:</p> 
   <pre><code class="language-python">def doubler(x):
     return 2 * x</code></pre> 
@@ -25,7 +25,7 @@ lambda x:
     else:
         return 'odd'</code></pre> 
   <p>Classic conditional statements will not work within a lambda function.</p> 
-  <h2>Invoking a lambda function</h2> 
+  <h5>Invoking a lambda function</h5> 
   <p>Alright, but how do we call such a function if it does not have a name?</p> 
   <p>Python syntax allows us to do so by enclosing the function in brackets and passing arguments right away:</p> 
   <pre><code class="language-python">(lambda x, y: (x + y) % 2)(1, 5)
@@ -35,7 +35,7 @@ lambda x:
 func(1, 10)
 # The output is 1</code></pre> 
   <p>However, assigning an anonymous function does not comply with the <a target="_blank" href="https://www.python.org/dev/peps/pep-0008/#programming-recommendations" rel="noopener noreferrer nofollow">official style guidelines</a>. It's reasonable to declare your function explicitly with the <strong>def</strong> keyword in case you want it to have a name.</p> 
-  <h2>When is it useful?</h2> 
+  <h5>When is it useful?</h5> 
   <p>You might have noticed already that the function from our example above is fully equivalent to a 'normal' function defined as follows:</p> 
   <pre><code class="language-python">def my_func(x, y):
     return (x + y) % 2</code></pre> 
@@ -56,7 +56,7 @@ doubler(2)
 tripler(2)
 # Outputs 6</code></pre> 
   <p>As you can see, the functions <code class="language-python">doubler()</code> and <code class="language-python">tripler()</code> are designed rather uniformly: they take a single argument and return it multiplied by <em>2</em> and <em>3</em> respectively. Thus, lambda functions can be embedded into a larger function, like <code class="language-python">create_function()</code> in our example.</p> 
-  <h2>Summary</h2> 
+  <h5>Summary</h5> 
   <p>Let's go over the main points we discussed:</p> 
   <ul> 
    <li> <p><strong>Anonymous functions</strong> are functions defined without a name.</p> </li> 

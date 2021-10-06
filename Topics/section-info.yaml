@@ -23,3 +23,9 @@ content:
 - Multi-line programs
 - Using models with templates
 - Basic data types
+- Set
+- Set operations
+- Methods and attributes
+- Forms and validation
+- Registration and authentication
+- Kwargs

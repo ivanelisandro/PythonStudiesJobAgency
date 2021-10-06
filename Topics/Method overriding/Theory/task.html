@@ -21,7 +21,7 @@ child = Child()
 parent.do_something()  # Did something
 child.do_something()  # Did something else</code></pre> 
   <p>Here, the method <code class="language-python">do_something</code> is overridden in the class <code class="language-python">Child</code>. If we hadn't overridden it, the method would have the same implementation as in the class <code class="language-python">Parent</code>. The code <code class="language-python">child.do_something()</code> would then print <code class="language-python">Did something</code>.</p> 
-  <h2 style="text-align: center;">super()</h2> 
+  <h5 style="text-align: center;">super()</h5> 
   <p>Python has a special function for calling the method of the parent class inside the methods of the child class: the <strong><code class="language-python">super()</code></strong> function. It returns a proxy, a temporary object of the parent class, and allows us to call a method of the parent class using this proxy. Let's take a look at the following example:</p> 
   <pre><code class="language-python">class Parent:
     def __init__(self, name):
@@ -38,7 +38,7 @@ class Child(Parent):
 # Called Parent __init__
 # Called Child __init__</code></pre> 
   <p>In Python 3 the method <code class="language-python">super()</code> doesn't have any required parameters. In earlier versions, however, you had to specify the class from which the method would search for a superclass. In our example, instead of <code class="language-python">super().__init__(name)</code> we would write <code class="language-python">super(Child, self).__init__(name)</code>. Both lines of code mean the same thing: that we want to find the superclass of the class <code class="language-python">Child</code> and then call its <code class="language-python">__init__</code> method. In Python 3 these are equivalent, so you don't have to explicitly write the type. However, it may be useful if you want to access the method of the "grandparent" class: the parent class of the parent class.</p> 
-  <h2 style="text-align: center;">super() with single inheritance</h2> 
+  <h5 style="text-align: center;">super() with single inheritance</h5> 
   <p>The method <code class="language-python">super()</code> is mostly used in cases of multiple inheritance: when a class inherits from two or more classes. There it is most convenient and useful but you'll have a chance to learn about that in the next topics. This method can also be of use with single inheritance which is what we'll cover now.</p> 
   <p>Suppose we have the following classes:</p> 
   <pre><code class="language-python">class Animal:
@@ -71,7 +71,7 @@ print(fluffy.species, fluffy.name)  # cat Fluffy</code></pre>
   <p>You may wonder why we had to do it this way. Why did we have to call the parent implementation of the method when we could manage without it? Well, the example above is a very simple one. In real-life projects, classes, their methods and the relationships between them are much more sophisticated.</p> 
   <p>Overriding does provide us with an opportunity to enhance the methods of the parent class but it doesn't mean that we should discard the original implementations. Sometimes, you may not have full access to the original implementation and you may not know everything that happens there. If you just override it, there may be unexpected consequences. So, it is recommended to always call the parent implementation. This way, you get the best of both worlds: you have the original implementation and your enhancements.</p> 
   <p>Just be careful and thoughtful when overriding method and using the <code class="language-python">super()</code> function and you'll do great!</p> 
-  <h2>Summary</h2> 
-  <p>Thus, in this topic, we've covered the concept of overriding in object-oriented programming, learned about a special <code class="language-python">super()</code> function that can call the parent class method of inside child class methods and how to use it in case of single inheritance. Hopefully, you'll find this information useful in your future projects!</p>
+  <h5>Summary</h5> 
+  <p>Thus, in this topic, we've covered the concept of overriding in object-oriented programming, learned about a special <code class="language-python">super()</code> function that can call the parent class method inside of child class methods and how to use it in case of single inheritance. Hopefully, you'll find this information useful in your future projects!</p>
  </body>
 </html>

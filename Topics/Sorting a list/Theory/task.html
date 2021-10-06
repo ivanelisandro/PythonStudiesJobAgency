@@ -3,7 +3,7 @@
  <head></head>
  <body>
   <p>After you have learned how to create and perform basic operations with lists, it is time to explore how to put their items in the order you need. There are two similar ways to do this: the method <code class="language-python">list.sort()</code> and the function <code class="language-python">sorted(list)</code>. They have much in common and take the same arguments, so let's see how they work.</p> 
-  <h2 style="text-align: center;">The sorting</h2> 
+  <h5 style="text-align: center;">The sorting</h5> 
   <p>Invoking <code class="language-python">list.sort()</code> as well as <code class="language-python">sorted(list)</code> sorts the list in the <em>ascending order</em> according to the natural order of stored elements.</p> 
   <pre><code class="language-python"># Invoking list.sort()
 numbers = [3, 2, 5, 4, 1]
@@ -38,7 +38,7 @@ strings.sort()
 print(strings)  # ['aa', 'aaa', 'b', 'q', 'qq']</code></pre> 
   <p>However, if your list has uncomparable types (like strings and integers together), an error will occur both in <code class="language-python">list.sort()</code> and in <code class="language-python">sorted(list)</code>:</p> 
   <pre><code class="language-no-highlight">TypeError: '&lt;' not supported between instances of 'str' and 'int'</code></pre> 
-  <h2 style="text-align: center;">The key</h2> 
+  <h5 style="text-align: center;">The key</h5> 
   <p>There is one more argument that can be used with both functions. You can pass the <code class="language-python">key</code> function, this function will be applied to each element in the list, and the list will be sorted depending on the results. For example, you can use <code class="language-python">key=len</code> to sort words by their length.</p> 
   <pre><code class="language-python">names = ['Mary', 'James', 'Tom', 'Katarina', 'John']
 names.sort(key=len)
@@ -52,7 +52,7 @@ print(sorted(nums, key=lambda x: x % 2))  # [4, 7, 1, 5]</code></pre>
 
 numbers = [1.5, 3.2, 4.3]
 print(sorted(numbers, key=my_sorted))  # [3.2, 4.3, 1.5]</code></pre> 
-  <h2 style="text-align: center;">The reverse</h2> 
+  <h5 style="text-align: center;">The reverse</h5> 
   <p>There is one more way to modify the order of elements in a list; you can reverse them. It can be done with the help of either the<code class="language-python">list.reverse()</code> method or by using the <code class="language-python">reversed()</code> function.</p> 
   <p>Invoking <code class="language-python">list.reverse()</code> reverses the order of elements in the list. Just as <code class="language-python">list.sort()</code>, it operates <em>in place</em> and returns <code class="language-python">None</code>, so you can't assign the result to another variable, instead, the initial list will be changed.</p> 
   <pre><code class="language-python">initial_list = [1, 2, 3, 4, 5]
@@ -70,7 +70,7 @@ for number in reversed(numbers):
 # 1</code></pre> 
   <p>Pay attention that if you try to print the iterator without using a loop, you will not get the needed result:</p> 
   <pre><code class="language-python">print(reversed(numbers))  # &lt;list_reverseiterator object at 0x7fe25e718b70&gt;</code></pre> 
-  <h2 style="text-align: center;">Summary</h2> 
+  <h5 style="text-align: center;">Summary</h5> 
   <p>In this topic, <span style="background-color: transparent; color: #0e101a; font-size: 12pt; font-variant: normal;">we have learned how to sort lists using the function <code class="language-python">sorted()</code> and the method <code class="language-python">list.sort()</code>; we've also found out the difference between them and their arguments. Besides, we have learned how to reverse elements in a list with the help of both the function and the method.</span></p> 
   <p><span style="background-color: transparent; color: #0e101a; font-size: 12pt; font-variant: normal;">To sum up:</span></p> 
   <ul> 
