@@ -29,3 +29,7 @@ content:
 - Forms and validation
 - Registration and authentication
 - Kwargs
+- Default arguments
+- Magic methods
+- Inheritance
+- Slicing
