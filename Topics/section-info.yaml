@@ -40,3 +40,5 @@ content:
 - Parallel iteration
 - Program with numbers
 - Flush and file arguments of print
+- The pprint module
+- The string module
