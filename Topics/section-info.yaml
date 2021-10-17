@@ -42,3 +42,7 @@ content:
 - Flush and file arguments of print
 - The pprint module
 - The string module
+- Class instances
+- Hashable
+- Copy of an object
+- Operations with tuple
