@@ -46,3 +46,6 @@ content:
 - Hashable
 - Copy of an object
 - Operations with tuple
+- Python unpacking operators (  and   )
+- Function annotations
+- Datetime parsing and formatting

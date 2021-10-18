@@ -1,0 +1,15 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    # add annotations for the function addition
+    def addition(a, b):
+        pass
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/15670#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Mon, 18 Oct 2021 03:18:43 UTC
+record: -1
