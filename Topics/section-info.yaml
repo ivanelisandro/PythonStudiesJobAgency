@@ -49,3 +49,4 @@ content:
 - Python unpacking operators (  and   )
 - Function annotations
 - Datetime parsing and formatting
+- Math magic methods
