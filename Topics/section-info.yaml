@@ -50,3 +50,5 @@ content:
 - Function annotations
 - Datetime parsing and formatting
 - Math magic methods
+- For loop
+- Object modification with ORM
