@@ -16,18 +16,23 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path
+from django.contrib.auth.views import LogoutView
 from django.views.generic import RedirectView
-from menu.views import MenuView, MySignupView, MyLoginView
-from resume.views import ResumesView
-from vacancy.views import VacanciesView
+from menu.views import MenuView, MySignupView, MyLoginView, HomeView
+from resume.views import ResumesView, CreateResumeView
+from vacancy.views import VacanciesView, CreateVacancyView
 
 urlpatterns = [
+    path('home', HomeView.as_view()),
     path('resumes', ResumesView.as_view()),
+    path('resume/new', CreateResumeView.as_view()),
     path('vacancies', VacanciesView.as_view()),
+    path('vacancy/new', CreateVacancyView.as_view()),
     path('login', MyLoginView.as_view()),
     path('login/', RedirectView.as_view(url='/login')),
     path('signup', MySignupView.as_view()),
     path('signup/', RedirectView.as_view(url='/signup')),
+    path('logout', LogoutView.as_view()),
     path('', MenuView.as_view()),
 ]
 urlpatterns += static(settings.STATIC_URL)

@@ -1,0 +1,9 @@
+{% extends "vacancy/base.html" %}
+{% block content %}
+  <form method="post" action="/vacancy/new">{% csrf_token %}
+    <p>Vacancy description:</p>
+    <input name="description">
+    <br>
+    <button type="submit">Add a vacancy</button>
+  </form>
+{% endblock %}

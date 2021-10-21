@@ -22,3 +22,10 @@ class MyLoginView(LoginView):
     form_class = AuthenticationForm
     redirect_authenticated_user = True
     template_name = 'menu/login.html'
+
+
+class HomeView(TemplateView):
+    template_name = 'menu/home.html'
+
+    def get(self, request, *args, **kwargs):
+        return render(request, self.template_name)

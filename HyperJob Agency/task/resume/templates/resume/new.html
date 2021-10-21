@@ -1,0 +1,9 @@
+{% extends "resume/base.html" %}
+{% block content %}
+  <form method="post" action="/resume/new">{% csrf_token %}
+    <p>Resume description:</p>
+    <input name="description">
+    <br>
+    <button type="submit">Add a resume</button>
+  </form>
+{% endblock %}

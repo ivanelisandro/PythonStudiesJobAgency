@@ -1,0 +1,9 @@
+{% extends "vacancy/base.html" %}
+{% block content %}
+  <form method="get" action="/resume/new">{% csrf_token %}
+    <button type="submit">Create resume</button>
+  </form>
+  <form method="get" action="/vacancy/new">{% csrf_token %}
+    <button type="submit">Create vacancy</button>
+  </form>
+{% endblock %}

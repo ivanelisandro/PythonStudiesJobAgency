@@ -1,6 +1,6 @@
 {% extends "resume/base.html" %}
 {% block content %}
   {% for resume in resumes %}
-    <div>{{ resume.author }}: {{ resume.description }}</div>
+    <div class="common_label">{{ resume.author }}: {{ resume.description }}</div>
   {% endfor %}
 {% endblock %}
