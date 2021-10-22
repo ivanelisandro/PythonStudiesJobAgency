@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/303588/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: Thu, 21 Oct 2021 01:19:36 UTC
+update_date: Thu, 21 Oct 2021 23:13:16 UTC
 stages:
 - id: 519
   step: 8598
@@ -86,6 +86,8 @@ topics:
     theory_id: 6057
   - title: Packages
     theory_id: 6384
+  - title: How to read the documentation
+    theory_id: 12125
   - title: Errors
     theory_id: 6052
   - title: Exceptions
@@ -238,6 +240,8 @@ topics:
     theory_id: 11680
   - title: Exception handling
     theory_id: 6270
+  - title: How to read a traceback
+    theory_id: 11710
   - title: Design principles
     theory_id: 8956
   3:

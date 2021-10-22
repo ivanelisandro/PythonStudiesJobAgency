@@ -53,3 +53,5 @@ content:
 - For loop
 - Object modification with ORM
 - Quotes and multi-line strings
+- Else statement
+- How to read a traceback
